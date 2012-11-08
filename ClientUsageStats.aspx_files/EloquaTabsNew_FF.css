@@ -1,0 +1,301 @@
+#InterFaceDiv {
+background: #D0D0D0;
+padding: 0px;
+border-left:solid #F0EEE4 2px;
+border-right:solid #555 2px;
+border-bottom:solid #555 2px;	
+border-top: solid #F0EEE4 2px;
+position: absolute;
+left: 10;
+top:31;
+z-index: 1;
+height:93%;
+}
+	
+ul#EloquaTabNav {
+font-size: 11px;
+list-style-type: none;
+padding-bottom: 26px;
+margin: 0;
+position: absolute;
+top:6;
+left: 12;
+z-index: 2;
+}
+
+ul#EloquaTabNav li {
+float: left;
+height: 21px;
+margin: 2px 0 0 0;
+}
+
+#EloquaTabNav a.ElqActive {
+float: left;
+display: block;
+text-decoration: none;
+padding: 4px;
+padding-top: 5px;
+color: blue;
+width: 104;
+height: 23;
+background: #F4F4F4 url('/eloquaimages/TabActive.gif') no-repeat top left;
+}
+
+#EloquaTabNav a.ElqInactive {
+float: left;
+display: block;
+color: #666;
+text-decoration: none;
+padding: 4px;
+width: 104;
+height: 23;
+border-top: solid #F0EEE4 1px;
+background: #F4F4F4 url('/eloquaimages/TabInActive.gif') no-repeat top left;
+}
+
+#EloquaTabNav a.ElqInactive:hover {
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color: #000;
+width: 104;
+height: 23;
+background:#F4F4F4 url('/eloquaimages/TabHover.gif') no-repeat top left;
+}
+
+.ElqTabActive 
+{
+float: left;	
+display: block;
+text-decoration: none;
+/*padding: 4px;*/
+padding-top: 5px;
+color: blue;
+width: 104;
+height: 18;
+background: #F4F4F4 url('/eloquaimages/TabActive.gif') no-repeat top left;	
+z-index:2;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+}
+
+.ElqTabInActive 
+{
+float: left;
+display: block;
+color: #666;
+text-decoration: none;
+/*padding: 4px;*/
+padding-top: 5px;
+width: 104;
+height: 18;
+border-top: solid #F0EEE4 1px;
+background: #F4F4F4 url('/eloquaimages/TabInActive.gif') no-repeat top left;	
+z-index:2;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+
+}
+
+.ElqTabActiveSmall
+{
+float: left;
+display: block;
+text-decoration: none;
+padding: 4px;
+padding-top: 5px;
+color: blue;
+width: 79;
+height: 23;
+background: #F4F4F4 url('/eloquaimages/TabActiveSmall.gif') no-repeat top left;	
+z-index:2;
+}
+
+.ElqTabInActiveSmall
+{
+float: left;
+display: block;
+color: #666;
+text-decoration: none;
+padding: 4px;
+width: 79;
+height: 23;
+border-top: solid #F0EEE4 1px;
+background: #F4F4F4 url('/eloquaimages/TabInActiveSmall.gif') no-repeat top left;	
+z-index:2;
+}
+
+.ElqTabHover
+{
+float: left;
+display: block;
+color: #666;
+text-decoration: none;
+/*padding: 4px;*/
+padding-top: 5px;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color: #000;
+width: 104;
+height: 19;/*manish: alter height for FF */
+background:#F4F4F4 url('/eloquaimages/TabHover.gif') no-repeat top left;	
+z-index:2;
+}
+
+.MainTabInactive
+{
+z-index:2;
+text-decoration: none;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color: #CDD5DA;
+padding-top:6px;
+/*~VS:Padding removed z-index already handles this*/
+padding-right:0px;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+background: #889AA8 url('/eloquaimages/maintabs_notselected.jpg') no-repeat top left;
+HEIGHT: 19px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+
+.MainTabActive
+{
+padding-top:6px;
+/*~VS:Padding removed z-index already handles this*/
+padding-right:0px;
+text-decoration: none;
+z-index:2;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color:white;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+background: #889AA8 url('/eloquaimages/maintabs_selected.jpg') no-repeat top left;
+HEIGHT: 19px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+
+.MainTabInvisible
+{
+padding-top:6px;
+padding-right:6px;
+cursor:arrow;
+cursor:default;
+color:white;
+margin:0px;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+HEIGHT: 24px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+
+
+.MainTabOver
+{
+z-index:2;
+text-decoration: none;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color: white;
+padding-top:6px;
+/*~VS:Padding removed z-index already handles this*/
+padding-right:0px;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+background: #889AA8 url('/eloquaimages/maintabs_hover.jpg') no-repeat top left;
+HEIGHT: 19px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** Keep until asp pages are removed  *************************/
+.MedDefault
+{
+z-index:2;
+text-decoration: none;
+cursor:hand;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color: #CDD5DA;
+padding-top:6px;
+padding-right:6px;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+background: #889AA8 url('/eloquaimages/maintabs_notselected.jpg') no-repeat top left;
+HEIGHT: 24px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+
+.MedActiveCustomer
+{
+padding-top:6px;
+padding-right:6px;
+text-decoration: none;
+z-index:2;
+cursor:hand;
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+color:white;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+background: #889AA8 url('/eloquaimages/maintabs_selected.jpg') no-repeat top left;
+HEIGHT: 24px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+
+.MedInactive
+{
+padding-top:6px;
+padding-right:6px;
+z-index:2;
+text-decoration: none;
+cursor:default;
+color: #CDD5DA;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+background: #889AA8 url('/eloquaimages/maintabs_notselected.jpg') no-repeat top left;
+HEIGHT: 24px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+.MedInvisible
+{
+padding-top:6px;
+padding-right:6px;
+cursor:arrow;
+cursor:default;
+color:white;
+margin:0px;
+font-size:8pt;
+font-family: Tahoma, Arial,Helvetica;
+HEIGHT: 24px;
+POSITION: absolute;
+WIDTH: 118px;
+text-align:center;
+}
+/********************** Keep until asp pages are removed  *************************/

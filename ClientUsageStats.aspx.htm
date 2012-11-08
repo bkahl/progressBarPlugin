@@ -1,0 +1,387 @@
+<html>
+	<head>
+		<title>Contact Usage</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- CSS -->
+		<link href="ClientUsageStats.aspx_files/bootstrap.css" rel="stylesheet">
+		<link href="ClientUsageStats.aspx_files/bootstrap-responsive.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="ClientUsageStats.aspx_files/plot.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/jquery.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/jquery-ui-1.css">
+		<link rel="stylesheet" type="text/css" src="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/WebComponents_FF.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/EloquaDefault_FF.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/StandardUI_FF.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/EloquaMainSectionStyle_FF.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/EloquaTabsNew_FF.css">
+		<link rel="stylesheet" type="text/css" href="ClientUsageStats.aspx_files/StandardForm_FF.css">
+	</head>
+
+<!--  Page content goes here -->
+
+	<body style="margin: 0 auto;">
+
+	<!--- Main Container -->
+    <div class="container" style="font-size: 12px;">
+     
+        <!-- Header -->
+        <div class="row">
+            <div class="span7">
+                <h2 class="title">Contact Status</h2>
+                <p style=" font-size: 13px;">At Eloqua, we believe that growing your marketing reach is a key metric in revenue performance management. The graph below shows the size of your marketing database over the last 12 months, along with the contact band included in your subscription.</p>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="row">
+          
+            <div class="span7">
+              
+                <div id="chartdiv" class="chartClass jqplot-target" style="height: 450px; width: 650px; position: relative;">
+
+                  <div style="height: 0px; width: 0px;" class="jqplot-title"></div>
+
+                  <table style="right: 5px; bottom: 25px;" class="jqplot-table-legend">
+                    <tbody><tr class="jqplot-table-legend" style="right: 5px; bottom: 25px;">
+                      <td style="text-align: center; padding-top: 0px;" class="jqplot-table-legend jqplot-table-legend-swatch">
+                        <div class="jqplot-table-legend-swatch-outline">
+                          <div style="background-color: rgb(238, 121, 80); border-color: rgb(238, 121, 80);" class="jqplot-table-legend-swatch"></div>
+                        </div>
+                      </td>
+                      <td style="padding-top: 0px;" class="jqplot-table-legend jqplot-table-legend-label">Entitlement</td>
+                      
+                      </tr>
+                      
+                      <tr class="jqplot-table-legend">
+                        <td style="text-align: center;" class="jqplot-table-legend jqplot-table-legend-swatch">
+                          <div class="jqplot-table-legend-swatch-outline">
+                            <div style="background-color: rgb(91, 160, 179); border-color: rgb(91, 160, 179);" class="jqplot-table-legend-swatch"></div>
+                          </div>
+                        </td>
+                        <td style="" class="jqplot-table-legend jqplot-table-legend-label">Database Size</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+                  <div style="position: absolute; display: none;" class="jqplot-highlighter-tooltip"></div>
+                  
+                </div><!-- close #chartdiv -->
+                
+            </div><!-- close .span7 -->
+            
+        </div><!-- close .row -->
+
+        <!-- Status -->
+        <div class="row">
+            <div class="span7">
+                
+                <br/>
+                <br/>
+                
+                 <div style="margin-top: -15px; width: 670px;">
+                    <h6>
+                      <span style="float: left; margin-right:5px; text-decoration: none;">Current Contact Usage:</span>  
+                      <span class="progressBarData" style="float: left;">&nbsp</span>
+                      
+                      <!--[if IE]>
+                      <span class="flag" style="float: right; width: 335px; text-align: right; right: 130px; position: relative;"></span>
+                      -->
+                      <!--[if !IE]>
+                      <span class="flag" style="float: right;"></span>
+                      -->
+                      
+                      <span class="flag" style="float: right;"></span>
+                    </h6> 
+                  </div>
+                
+                <div style="clear: both;"></div>
+                
+				        <div id="progress-bar" class="progress">
+                    <div class="bar"></div>	
+                </div>
+                
+            </div>
+        </div>
+
+        <br/>
+        
+        <!-- Text --> 
+        <div class="row">
+            <div class="span7">
+              <div id="under-message" class="alert alert-success" style="display: none;">
+                You're well within your limit and have room to grow. Visit Topliners for some ideas! 
+              </div>
+              <div id="caution-message" class="alert" style="display: none;">
+                Approaching the top of your contact band! You currently have <span id="caution-amount" style="font-size: 15px; font-weight: bold;"></span> contacts remaining. Contact your Account Director or Eloqua Support for options before you exceed your band!
+              </div>
+              <div id="warning-message" class="alert alert-error" style="display: none;">
+                You've exceeded expectations and are currently above your contact band by <span id="caution-amount" style="font-size: 15px; font-weight: bold;"></span> contacts. It's time to speak with your Account Director or Eloqua Support to proceed with upgrading.
+              </div>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <footer>
+               <p style=" font-size: 10px;"> Contract Entitlement Data Last Updated: Friday, January 01, 1999. </p>
+         </footer>
+        
+		
+		<!-- js -->
+		<script type="text/javascript">function getXsrfToken() { return '00000000-0000-0000-0000-000000000000'; }</script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jquery-1.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/NullFuncs.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/HelpFunctions.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/RoboHelp_CSH.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/ValidationScripts.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/ButtonScripts.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/DateScripts.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/FocusFunctions.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/WebComponents.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/Request.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/Ajax.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/Menu.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/Validation.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/global.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/ModalWindow.js"></script>
+		<script type="text/javascript">function resizeIframe(){if(parent.document.getElementById('')){parent.document.getElementById('').height = document.body.scrollHeight;}}</script><!-- base href="https://devsecure.eloquacorp.com/Manager/SystemModule/ClientUsageStats.aspx?xsrfToken=00000000-0000-0000-0000-000000000000" --><script type="text/javascript">function getXsrfToken() { return '00000000-0000-0000-0000-000000000000'; }</script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jquery_002.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jqplot.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jqplot_002.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jqplot_003.js"></script>
+		<script language="javascript" type="text/javascript" src="ClientUsageStats.aspx_files/jquery-ui-1.js"></script>		
+    
+    <script type="text/javascript">
+
+            // Data is given to this JavaScript via a server call; so the JS can work assuming all data is ready!
+            var contactusageData = [{"count":100000,"date":1325376000000},{"count":100000,"date":1325462400000},{"count":100000,"date":1325548800000},{"count":100000,"date":1325635200000},{"count":100000,"date":1325721600000},{"count":100000,"date":1325808000000},{"count":100000,"date":1325894400000},{"count":100000,"date":1325980800000},{"count":100000,"date":1326067200000},{"count":100000,"date":1326153600000},{"count":100000,"date":1326240000000},{"count":100000,"date":1326326400000},{"count":100000,"date":1326412800000},{"count":100000,"date":1326499200000},{"count":100000,"date":1326585600000},{"count":100000,"date":1326672000000},{"count":100000,"date":1326758400000},{"count":100000,"date":1326844800000},{"count":100000,"date":1326931200000},{"count":100000,"date":1327017600000},{"count":100000,"date":1327104000000},{"count":100000,"date":1327190400000},{"count":100000,"date":1327276800000},{"count":100000,"date":1327363200000},{"count":100000,"date":1327449600000},{"count":100000,"date":1327536000000},{"count":100000,"date":1327622400000},{"count":100000,"date":1327708800000},{"count":100000,"date":1327795200000},{"count":100000,"date":1327881600000},{"count":100000,"date":1327968000000},{"count":100000,"date":1328054400000},{"count":75000,"date":1328140800000},{"count":75000,"date":1328227200000},{"count":75000,"date":1328313600000},{"count":75000,"date":1328400000000}];
+
+            var entitlementsData = [{"Count":50000,"EffectiveDate":1325376000000,"EntitlementCode":"0301934","IsCurrent":true,"ReferenceNumber":"Current"},{"Count":2000,"EffectiveDate":1104537600000,"EntitlementCode":"bar","IsCurrent":false,"ReferenceNumber":"baz"},{"Count":20000,"EffectiveDate":1301875200000,"EntitlementCode":"BigDrop","IsCurrent":false,"ReferenceNumber":"BigDrop"},{"Count":60000,"EffectiveDate":1312761600000,"EntitlementCode":"Current","IsCurrent":false,"ReferenceNumber":"Value"},{"Count":100200,"EffectiveDate":1262304000000,"EntitlementCode":"foo","IsCurrent":false,"ReferenceNumber":"bar"},{"Count":100000,"EffectiveDate":915148800000,"EntitlementCode":"hello","IsCurrent":false,"ReferenceNumber":"world"}];
+              
+             var currentTime = new Date();
+             var lastYear = new Date();
+
+             lastYear.setMonth(lastYear.getMonth() - 12);
+
+             var usage = [];
+             var max = 1000;
+             for (c in contactusageData)
+             {
+                 var entry = [];
+                 var d = new Date(contactusageData[c].date);
+                 if ( d > lastYear) {
+                     entry.push(d);
+
+                     var cnt = contactusageData[c].count;
+                     entry.push(cnt);
+                     if (cnt > max)
+                         max = cnt;
+                     usage.push(entry);
+                 }
+             }
+             
+             // Fix teh Entitlments step function!
+             //
+             // 1: for Entitlements, pick only ONE value that is older than 365 days!
+             // 2: ignore all other data!
+             // 3: create a step function at each change
+
+             var entitlementsCurrentYear = [];
+             var startingE = null;
+             var firstValid = null;
+             for (c in entitlementsData)
+             {
+                 var curr = entitlementsData[c];
+                 var ed = new Date(curr.EffectiveDate);
+                 // found an older one.
+                 if ( ed < lastYear ) {
+
+                     // what if we already had a newer, old one
+                     if (firstValid == null || firstValid < ed) {
+
+                         firstValid = ed;
+                         startingE = curr;
+                     }
+                 } else {
+                     // from this year
+                     entitlementsCurrentYear.push(curr);
+                 }
+             }
+
+             // Sort it now for step function!
+             entitlementsCurrentYear = entitlementsCurrentYear.sort( function(a,b){return a.EffectiveDate - b.EffectiveDate})
+
+             if (startingE != null) {
+                 entitlementsCurrentYear.unshift(startingE);
+             }
+
+
+              // Now create a step function with the data above!
+              var entitlements = [];
+              // now loop through others.
+
+              for (c in entitlementsCurrentYear) {
+                  var curr = entitlementsCurrentYear[c];
+                  if (c == 0) {
+                      // start with old
+                      entitlements.push([lastYear, curr.Count]);
+                  } else {
+                      entitlements.push([new Date(curr.EffectiveDate), entitlementsCurrentYear[c - 1].Count]);
+                  }
+                  var ed = new Date(curr.EffectiveDate);
+
+                  if (ed > lastYear) {
+                      entitlements.push([new Date(curr.EffectiveDate), curr.Count]);
+                  }
+              }
+              // finally - add the last entry @today given last element.
+
+              entitlements.push([currentTime, entitlementsCurrentYear.pop().Count]);
+
+              // Make the max Floor divisable by 1000;
+               for (c in entitlements) {
+                   var cnt = entitlements[c][1];
+                   if (cnt > max)
+                       max = cnt;
+               }
+               max = max *1.5;
+
+         $(document).ready(
+         	function()
+         	{
+
+         		var showChart = function(usagedata, entitlements, maxValue)
+         		{
+         			$.jqplot('chartdiv',  [entitlements, usagedata],
+         					 { 
+         						    // Grid setup
+                                  grid: {
+                                         drawGridLines: true,        // wether to draw lines across the grid or not.
+                                         gridLineColor: '#c3c3c3',    // *Color of the grid lines.
+                                         background: '#ffffff',      // CSS color spec for background color of grid.
+                                         borderColor: '#aaaaaa',     // CSS color spec for border around grid.
+                                         borderWidth: 1.0,           // pixel width of border around grid.
+                                         shadow: true,               // draw a shadow for grid.
+                                         shadowAngle: 45,            // angle of the shadow.  Clockwise from x axis.
+                                         shadowOffset: 1.5,          // offset from the line of the shadow.
+                                         shadowWidth: 2,             // width of the stroke for the shadow.
+                                         shadowDepth: 2,             // Number of strokes to make when drawing shadow.
+                                                                 // Each stroke offset by shadowOffset from the last.
+                                         shadowAlpha: 0.07,           // Opacity of the shadow
+                                         renderer: $.jqplot.CanvasGridRenderer,  // renderer to use to draw the grid.
+                                         rendererOptions: {}         // options to pass to the renderer.  Note, the default
+                                                                     // CanvasGridRenderer takes no additional options.
+                                     },
+         						 axes:
+         						 {
+         							 yaxis:{min:0, max:maxValue},
+         							 xaxis:
+         							     {
+         							         renderer:$.jqplot.DateAxisRenderer,
+         							         tickOptions:{
+                                                 formatString:'%b&nbsp;%#d'
+                                              } 
+         							     }
+         						 },
+                                 cursor: {
+                                     show: false
+                                 },
+                                 legend: {
+                                     show: true
+                                     },
+         						 series:[
+         							 {
+                                          label: 'Subscription Contact Ban  ',
+         								 highlighter: {
+                                                     show: true,
+                                                     sizeAdjust: 7.5
+                                          },
+                                          pointLabels: { show:true } ,
+         								 color:'#EE7950',
+                                          shadow: false,
+                                          lineWidth: 4,
+         								 markerOptions: {
+                                                     show: true,             // wether to show data point markers.
+                                                     style: 'filledCircle',  // circle, diamond, square, filledCircle.
+                                                     lineWidth: 2,       // width of the stroke drawing the marker.
+                                                     size: 12,            // size (diameter, edge length, etc.) of the marker.
+                                                     color: '#EE9980'    // color of marker, set to color of line by default.
+
+                                         }
+         							 },
+         							 {
+                                          label: 'Actual Daily Database Size',
+         								 color:'#5ba0b3',
+         								 
+         								 lineWidth:2,
+                                          markerOptions: {
+                                                     show: false
+                                                     } 
+         							 }
+         						 ]
+         					 });
+         		}
+             showChart(usage, entitlements, max);
+             
+             var dataObj = {
+               currentContactUsage: 50,        //contactusageData[0].count, //max
+               currentContactEntitlement: 100,    //entitlementsData[0].Count, //used
+               chooseBackground: 'fancy',         //fancy or ie
+               percentageUsed: function(){
+                 return (this.currentContactUsage/this.currentContactEntitlement)*100;
+               },           
+               addCommas: function(nStr){
+                 	nStr += '';
+                	x = nStr.split('.');
+                	x1 = x[0];
+                	x2 = x.length > 1 ? '.' + x[1] : '';
+                	var rgx = /(\d+)(\d{3})/;
+                	while (rgx.test(x1)) {
+                		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                	}
+                	return x1 + x2;
+               }
+             }
+             
+             $('body').addClass(dataObj.chooseBackground);
+             $('table.jqplot-table-legend').css('top','365px');
+             
+             if ( dataObj.percentageUsed() >= 100 ) {
+                 var img = "<img src='images/warning-flag.png' width='16' height='16' style='position: relative; top:3px;'/><span class='calculatedAmount' style='margin-left: 5px;'></span>";
+                 $('#warning-message').show();
+                 $('#warning-message > span').text(dataObj.addCommas(Math.ceil(dataObj.currentContactUsage-dataObj.currentContactEntitlement)));
+                 $('#progress-bar').addClass('progress-danger');
+                 $('.flag').html(img);
+                 $('.calculatedAmount').text(dataObj.addCommas(Math.ceil(dataObj.currentContactUsage-dataObj.currentContactEntitlement)) + ' Over')
+             } else if ( dataObj.percentageUsed() > 80) {
+                 var img = "<img src='images/caution-flag.png' width='16' height='16' style='position: relative; top:3px;'/><span class='calculatedAmount' style='margin-left: 5px;'></span>";
+                 $('#caution-message').show();
+                 $('#caution-amount').text(dataObj.addCommas(Math.ceil(dataObj.currentContactEntitlement-dataObj.currentContactUsage)));
+                 $('#progress-bar').addClass('progress-info');
+                 $('.flag').html(img);
+                 $('.calculatedAmount').text(dataObj.addCommas(Math.ceil(dataObj.currentContactEntitlement-dataObj.currentContactUsage)) + ' Remaining');
+             } else {
+                 var img = "<img src='images/under-flag.png' width='16' height='16' style='position: relative; top:3px;'/><span class='calculatedAmount' style='margin-left: 5px;'></span>";
+                 $('#under-message').show();
+                 $('#progress-bar').addClass('progress-success');
+                 $('.flag').html(img);
+                 $('.calculatedAmount').text(dataObj.addCommas(Math.ceil(dataObj.currentContactEntitlement-dataObj.currentContactUsage)) + ' Remaining');
+             }
+ 
+             if(dataObj.percentageUsed() > 100){ $('.bar').css('color','#3B3C43').css('font-size','17px').css('width','100%').text(dataObj.addCommas(dataObj.currentContactUsage) + ' Used'); }
+             else $('.bar').css('color','#3B3C43').css('font-size','17px').css('width',dataObj.percentageUsed()+'%').text(dataObj.addCommas(dataObj.currentContactUsage) + ' Used');
+                         
+             $('.progressBarData').text(dataObj.addCommas(Math.ceil(dataObj.percentageUsed()) + '% OF ' + dataObj.currentContactEntitlement));
+             
+         	});
+
+      </script>
+             
+    </div> <!-- close .container -->     
+    
+  </body>
+  
+</html>

@@ -1,0 +1,832 @@
+FORM
+{
+    MARGIN-BOTTOM: 0px
+}
+INPUT
+{
+    FONT-FAMILY: arial,helvetica,sans-serif;
+    FONT-SIZE: 11px;
+}
+TEXTAREA
+{
+    FONT-FAMILY: arial,helvetica,sans-serif;
+    FONT-SIZE: 11px;
+}
+A
+{
+    COLOR: black;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: black
+}
+A:active
+{
+    COLOR: black;
+    TEXT-DECORATION: underline;
+}
+A:hover
+{
+    COLOR: black;
+    TEXT-DECORATION: underline
+}
+BODY
+{
+    FONT-FAMILY: arial,helvetica,sans-serif;
+    FONT-SIZE: 11px;
+	margin-top:4px;
+	margin-bottom:0px;
+	margin-left:5px;
+	margin-right:0px;
+
+}
+P {
+	FONT-FAMILY: arial,helvetica,sans-serif;
+    FONT-SIZE: 11px;
+}
+TD
+{
+    FONT-SIZE: 11px
+}
+TH
+{
+	font-size:12px;
+}
+
+.TitleBar
+{
+	FONT-SIZE: 11pt;
+	Width: 220px;
+    BACKGROUND-COLOR: #848284;
+	COLOR: white;
+	Padding-Left: 5px;
+    Padding-Right: 5px;
+	Padding-Top: 2px;
+	Padding-Bottom: 2px;
+	height:28px;
+	vertical-align: top;
+}
+
+.TitleBarFull
+{
+	FONT-SIZE: 11pt;
+	Width: 100%;
+    BACKGROUND-COLOR: #848284;
+	COLOR: white;
+	Padding-Left: 5px;
+	Padding-Right: 5px;
+	Padding-Top: 2px;
+	Padding-Bottom: 2px;
+	vertical-align: top;
+}
+
+.TitleBarSmall
+{
+	FONT-SIZE: 11pt;
+	Width: 220px;
+    BACKGROUND-COLOR: #848284;
+	COLOR: white;
+	Padding-Left: 5px;
+	Padding-Top: 2px;
+	Padding-Bottom: 2px;
+	vertical-align: top;
+}
+.TitleBarTiny
+{
+	FONT-SIZE: 9pt;
+	Width: 220px;
+    BACKGROUND-COLOR: #848284;
+	COLOR: white;
+	Padding-Left: 5px;
+	Padding-Top: 1px;
+	Padding-Bottom: 1px;
+	vertical-align: top;
+}
+.TitleBar2
+{
+	FONT-SIZE: 11pt;
+	Width: 120px;
+    BACKGROUND-COLOR: #848284;
+	COLOR: white;
+	Padding-Left: 5px;
+    Padding-Right: 5px;
+	Padding-Top: 0px;
+	Padding-Bottom: 2px;
+	height:28px;
+	vertical-align: top;
+}
+.ShadedTiny
+{
+	FONT-SIZE: 11px;
+    BACKGROUND-COLOR: #C0C0C0;
+	COLOR: black;
+	Padding-Left: 5px;
+	Padding-Top: 1px;
+	Padding-Bottom: 1px;
+	vertical-align: top;
+}
+.ShadedTinyDark
+{
+	FONT-SIZE: 11px;
+    BACKGROUND-COLOR: #848284;
+	COLOR: white;
+	Padding-Left: 5px;
+	Padding-Top: 1px;
+	Padding-Bottom: 1px;
+	vertical-align: top;
+}
+.ContactSection
+{
+	FONT-SIZE: 10pt;
+	Width: 215px;
+    BACKGROUND-COLOR: #d0d0d0;
+	COLOR: black;
+	Padding-Left: 5px;
+	Padding-Top: 1px;
+	Padding-Bottom: 1px;
+	vertical-align: middle;
+}
+
+.DescriptionText
+{
+	FONT-SIZE: 7pt;
+	vertical-align: top;
+}
+
+H3
+{
+    COLOR: black;
+    FONT-SIZE: 16px;
+}
+H2
+{
+    COLOR: black;
+    FONT-SIZE: 14px;
+}
+.FormLabel
+{
+	Font-weight: bold;
+	Font-size: 14px;
+}
+.EloquaTab
+{
+	Font-size: 12px;
+	Padding-Left: 4px;
+	Padding-Top: 5px;
+}
+.SMText
+{
+    FONT-SIZE: 8pt;
+}
+.EloquaList
+{
+}
+
+.Container
+{
+    FONT-SIZE: 10pt
+}
+
+BODY.Data
+{
+    BACKGROUND-COLOR: #ffffff
+}
+SELECT
+{
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    FONT-SIZE: 11px;
+}
+FieldSet
+{
+	padding-left: 3px;
+}
+Legend
+{
+	Font-Size: 11px;
+}
+ReportCaption
+{
+	Font-Size: 9px;
+}
+
+.InfoBox
+{
+	background-color:#ffffd9;
+	border:solid #888888 1px;
+	padding-left:4px;
+}
+
+
+.DisplayTable
+{
+BORDER-BOTTOM: gray 1px solid;
+BORDER-LEFT: gray 1px solid;
+BORDER-RIGHT: gray 1px solid;
+BORDER-TOP: gray 1px solid;
+}
+
+.DisplayTableHeader
+{
+font-weight:bolder;
+background-color:#c8c8d8;
+padding-left:4px;
+BORDER-BOTTOM: gray 1px solid;
+}
+.DisplayTableHeaderSmall
+{
+font-weight:normal;
+font-size:10px;
+background-color:#c8c8d8;
+padding-left:4px;
+BORDER-BOTTOM: gray 1px solid;
+}
+.DTHS_b
+{
+font-weight:normal;
+font-size:10px;
+background-color:#c8c8d8;
+padding-left:4px;
+BORDER-BOTTOM: gray 1px solid;
+border-right:gray 1px solid;
+}
+.DisplayTableRowA
+{
+background-color:#f0f0f0;
+padding-left:4px;
+}
+
+.DisplayTableRowB
+{
+background-color:#e6e6e6;
+padding-left:4px;
+}
+.DTRA_b
+{
+background-color:#f0f0f0;
+padding-left:4px;
+border-right:gray 1px solid;
+}
+.DTRB_b
+{
+background-color:#e6e6e6;
+padding-left:4px;
+border-right:gray 1px solid;
+}
+
+.ToggleDown
+{
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+padding-top:2px;
+font-size:13px;
+background-image:url(/eloquaimages/ToggleButton-down.gif);
+HEIGHT: 20px;
+POSITION: absolute;
+WIDTH: 79px;
+}
+
+.ToggleHigh
+{
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+padding-top:2px;
+font-size:13px;
+background-image:url(/eloquaimages/ToggleButton-high.gif);
+HEIGHT: 20px;
+POSITION: absolute;
+WIDTH: 79px;
+}
+
+.ReportViewDown
+{
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+padding-top:2px;
+font-size:9px;
+HEIGHT: 20px;
+POSITION: absolute;
+WIDTH: 100px;
+border: inset white;
+border-width: thin;
+}
+
+.ReportViewHigh
+{
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+padding-top:2px;
+font-size:9px;
+HEIGHT: 20px;
+POSITION: absolute;
+WIDTH: 100px;
+border: outset white;
+border-width: thin;
+}
+
+
+.ToggleADown
+{
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+padding-top:1px;
+font-size:13px;
+background-image:url(/eloquaimages/ToggleAButton-down.gif);
+HEIGHT: 25px;
+POSITION: absolute;
+WIDTH: 100px;
+}
+
+.ToggleAUp
+{
+/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+cursor:pointer;
+padding-top:1px;
+font-size:13px;
+background-image:url(/eloquaimages/ToggleAButton-Up.gif);
+HEIGHT: 25px;
+POSITION: absolute;
+WIDTH: 100px;
+}
+
+.elqMenuBar{
+position:absolute;
+width:165px;
+border:2px outset white;
+background-color:menu;
+font-family:Tahoma;
+line-height:18px;
+cursor:default;
+font-size:11px;
+z-index:100;
+visibility:hidden;
+}
+
+.elqMenuBarWide{
+position:absolute;
+width:365px;
+border:2px outset white;
+background-color:menu;
+font-family:Tahoma;
+line-height:18px;
+cursor:default;
+font-size:11px;
+z-index:100;
+visibility:hidden;
+}
+
+.elqMenuItem
+{
+padding-left:5px;
+padding-right:10px;
+z-index:100;
+width:100%;
+height:18px;
+color:black;
+}
+
+.elqToolBar{
+background-color: #848284;
+color: white;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:2px;
+padding-left:2px;
+height:28px;
+}
+
+.elqToolBarDark{
+background-color: #848284;
+color: black;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:2px;
+padding-left:2px;
+height:28px;
+}
+
+.elqToolBarNew{
+color: white;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:2px;
+padding-left:2px;
+height:22px;
+}
+
+.elqToolBarDarkNew{
+color: black;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:2px;
+padding-left:2px;
+height:22px;
+}
+
+.elqToolBarNewWebComponents{
+color: white;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:2px;
+padding-left:2px;
+float:left;
+}
+
+.elqToolBarDarkNewWebComponents{
+color: black;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:2px;
+padding-left:2px;
+height:28px;
+}
+
+.elqToolBarNewReport{
+color: white;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:2px;
+padding-top:0px;
+padding-left:2px;
+height:22px;
+}
+
+.elqToolBarDarkNewReport{
+color: black;
+font-family:Tahoma, Arial, Helvetica;
+font-size:11px;
+padding-bottom:0px;
+padding-top:0px;
+padding-left:2px;
+height:26px;
+}
+
+.elqMenu
+{
+z-index:100;
+}
+
+.elqMenuHover{
+z-index:100;
+}
+
+.elqAnchoredMenu{
+z-index:100;
+}
+
+
+.elqToolTips{
+position:absolute;
+width:200px;
+border:solid #888888 1px;
+background-color:#ffffd9;
+padding-left:4px;
+z-index:10;
+visibility:hidden;
+}
+
+.InsetDiv
+{
+border: inset white;
+border-width: thin;
+color: #000000;
+background-color: #FFFFFF;
+}
+.PlaceWhite
+{
+border: 0;
+background-color: #FFFFFF;
+width: 5px;
+height: 15px;
+float:left;
+}
+.PlaceWhite5
+{
+border: 0;
+background-color: #FFFFFF;
+width: 10px;
+height: 15px;
+float:left;
+}
+.PlaceWhite2
+{
+border: 0;
+background-color: #FFFFFF;
+width: 13px;
+height: 15px;
+float:left;
+}
+.PlaceWhite3
+{
+border: 0;
+background-color: #FFFFFF;
+width: 20px;
+height: 15px;
+float:left;
+}
+.PlaceWhite4
+{
+border: 0;
+background-color: #FFFFFF;
+width: 40px;
+height: 15px;
+float:left;
+}
+.PlaceWhite6
+{
+border: 0;
+background-color: #FFFFFF;
+width: 16px;
+height: 16px;
+float:left;
+}
+.Inst
+{
+FONT-SIZE: 8.5pt;
+font-weight:bolder;
+}
+.PlaceGray
+{
+border: 0;
+background-color: #c0c0c0;
+width: 8px;
+height: 12px;
+}
+.PlaceUX2Dark
+{
+border: 0;
+background-color: #F4F4F4;
+width: 5px;
+height: 15px;
+}
+.PlaceUX2Dark3
+{
+border: 0;
+background-color: #F4F4F4;
+width: 20px;
+height: 15px;
+/*[~VS]adding this syle Evaluate->Reporting->ReportAdmin->New email update*/
+float:left;
+}
+.PlaceBlue
+{
+border: 0;
+background-color: #6666cc;
+width: 8px;
+height: 12px;
+}
+.PlaceYellow
+{
+border: 0;
+background-color: #ffcc66;
+width: 8px;
+height: 12px;
+}
+
+td.Bttn{
+	font-family: Arial, Helvetica;
+	font-size: 8pt;
+	height:21px;
+}
+.BttnLow
+{
+	text-align: center;
+	color: #000000;
+	border: 1px solid #ffffff;
+	background: #dddddd;
+}
+.BttnLow3D
+{
+	text-align: center;
+	color: #000000;
+	border: 1px solid #ffffff;
+	background: #dddddd;
+}
+.BttnHigh
+{
+	text-align: center;
+	color: #315d84;
+	border: 1px solid #6396ce;
+	background: #dee7f7;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+}
+.BttnLowWhite
+{
+	text-align: center;
+	color: #000000;
+	border: 1px solid #696969;
+	background: #ffffff;
+}
+
+.BttnLowMenu
+{	
+	padding:1px;
+	font-family: Arial, Helvetica;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	border: 1px solid #BDB9AE;
+	background: #BDB9AE;
+	height:23px;
+}
+.BttnHighMenu
+{	
+	padding: 1px;
+	font-family: Arial, Helvetica;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+	color: #315d84;
+	border: 1px solid #6396ce;
+	background: #dee7f7;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+	height:23px;
+}
+.BttnLowNew
+{
+	text-align: center;
+	color: #000000;
+	border:1px solid #F4F4F4;
+	background: #F4F4F4;
+	padding:1px;
+	display:inline-block;
+}
+.BttnHighNew
+{
+	text-align: center;
+	color: #315d84;
+	border: 1px solid #6396ce;
+	background: #dee7f7;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+	padding: 1px;
+	display:inline-block;
+}
+.BttnHighNewToolbar
+{
+	text-align: center;
+	color: #315d84;
+	border: #6396ce;
+	background: #dee7f7;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+}
+.BttnLowNewToolbar
+{
+	text-align: center;
+	/*[~VS] comenting padding for menu item in reporting*/
+	padding:2px;
+	border: 1px transparent;
+	display:inline-block;
+}
+.BttnLowNewToolbar2
+{	
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:white;
+	text-align: center;
+	border: 1px transparent;
+	/*~VS:Adding padding for main menu
+	[~VS] comenting padding for main menu and changing VB code ButtonUtility.vb
+	padding:5 0 3 0;*/
+}
+.BttnHighNewToolbar2
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	text-align: center;
+	color: #315D84;
+	border: #6396ce;
+	background: #dee7f7;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+	/*[~VS] comenting padding for main menu and changing VB code ButtonUtility.vb
+	padding:5 0 3 0;*/
+}
+
+.BttnLowAppToday
+{
+	height: 17px;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 6px;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+}
+.BttnHighAppToday
+{
+	height: 17px;
+	text-align: center;
+	color: #315d84;
+	padding-top: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 5px;
+	border: 1px solid #6396ce;
+	background: #dee7f7;
+	/*~VS:Adding style for firefox.Order maintained as IE, Firefox */
+	cursor:pointer;
+}
+
+.AppTodayConsoleSearchBarText
+{
+	font-size: 8pt;
+}
+
+div.footnote {
+	margin-left: 21px;
+	width: 100%;
+	font-size: 9px;
+	margin-bottom: 10px;
+}
+
+div.footnote div.seperator {
+	border-style: solid;
+	border-color: #4e6f87;
+	border-width: 0px 0px 1px 0px;
+	width: 327px;
+	margin-bottom: 5px;
+}
+
+/* Breaking the Standard */
+
+.UnderlineLink A
+{
+    COLOR: #391c86;
+    TEXT-DECORATION: underline;
+}
+.UnderlineLink A:visited
+{
+    COLOR: #391c86;
+    TEXT-DECORATION: underline;
+    
+}
+.UnderlineLink A:active
+{
+    COLOR: #391c86;
+    TEXT-DECORATION: underline;
+}
+.UnderlineLink A:hover
+{
+    COLOR: #391c86;
+    TEXT-DECORATION: underline;
+}
+
+/* ===================== */
+
+/* Buttons Look Like Buttons - Bottom Toolbar */
+.BttnLowMenu, .BttnHighMenu
+{
+	vertical-align:middle;
+	height:20px;
+	padding: 5 5 10 5;
+	font-size: 8pt;
+	font-weight:normal;
+	color: #425e73;
+	border:2px outset white;
+	background-color: #c9e1fa;
+	background-image: url(/EloquaImages/icons/button_out.gif);
+	background-position: center center;
+	background-repeat:repeat-x;
+}
+.BttnHighMenu
+{
+	color: black;
+	background-image: url(/EloquaImages/icons/button_over.gif);
+}
+
+
+/*Fixing Bug :WF-4633, apply these css for Search Button*/
+.BttnHighNewSearch
+{
+	text-align: center;
+	color: #315d84;
+	border: 1px solid #6396ce;
+	background: #dee7f7;	
+	cursor:pointer;
+	padding: 1px;
+	width:60px;
+	display:inline-block;
+}
+
+.BttnLowNewToolbarSearch
+{
+	text-align: center;	
+	padding:2px;
+	border: 1px transparent;
+	width:60px;
+	display:inline-block;
+	
+}

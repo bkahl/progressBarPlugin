@@ -1,0 +1,68 @@
+.topBar {
+	background-image: url(/eloquaimages/icons/background_sectiontoolbar1.jpg);
+	background-repeat:repeat-x;
+	background-color:#F2F0E3;
+	padding:0px;
+}
+
+.topBar2 {
+	/*background-image: url(/eloquaimages/icons/background_sectiontoolbar3.jpg);
+	background-image: url(/eloquaimages/icons/background_sectiontoolbar2.jpg);*/
+	background-repeat:repeat;
+	background-color:#999999;
+	padding:0px;
+}
+
+
+.topBar .content {
+	padding: 0px;
+	color:#000000;
+	font-size:12px;
+	font-family: Arial, Tahoma, Helvetica;
+	vertical-align: top;
+}
+
+.topBar .separator {
+	padding: 0px;
+}
+
+.topBar .title {
+	font-weight:normal;
+}
+
+.topBar .menu {
+	padding-left: 15px;
+	padding-right: 3px;
+}
+
+.MainSectionTableCell
+{
+	border-width: 1px 0px 0px 1px;
+	border-style:solid; 
+	border-color:#B6B2A3;	
+}
+.MainSectionTableTreeCell
+{
+	border-width:1px 0px 0px 0px;
+	border-color:#D4CCC2;
+	border-style:solid;
+	background-color:#E7E5DA;
+	width:1px;
+	height:100%;
+}
+
+.MainSectionTableTreeCellDivision
+{
+	border-width:0px 0px 1px 0px;
+	border-color:#B6B2A3; 
+	border-style:solid;
+}
+
+.MainSectionTableTreeCellText 
+{
+	padding-left:10px;
+	color:#7F7C73;
+	border-width:0px 0px 1px 0px; 
+	border-color:#B6B2A3; 
+	border-style:solid;
+}

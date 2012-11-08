@@ -1,0 +1,971 @@
+.LayoutTableHeaderRow, .LayoutTableHeaderRowExpandable, .LayoutTableHeaderCell
+{
+	font-size:9pt;
+	font-family:Tahoma, Arial, Helvetica;
+	color:#4E6F87;
+}
+.LayoutTableHeaderRow, .LayoutTableHeaderRowExpandable
+{
+    background-image: url(/EloquaImages/form_header_background.gif);
+   	border-bottom: solid 1px #4E6F87;
+    vertical-align: top;
+	background-repeat: repeat-x;
+}
+.LayoutTableHeaderRow
+{
+    background-position: bottom;
+    padding-top: 10px;
+    padding-left:0px;
+}
+.LayoutTableHeaderRowExpandable
+{
+	background-position: bottom;
+    padding-bottom: -3px;
+ 	padding-left: 1px;
+}
+.LayoutTableTabActive, .LayoutTableTabInActive
+{
+    /*Nadeem: commenting as it is not required according to
+    https://devsecure.eloquacorp.com/Agent/ModalLoad.aspx?/EloquaRoot/DataCard/EditDataCardServices.aspx%3FOpenInModal=True%26ReadOnly=False%26DataCardSetID=178458&Title=Event Actions
+    display: block;
+    */
+    text-decoration: none;
+    padding: 0px;
+    width: 104;
+    height: 23;
+    border-top: solid #F0EEE4 1px;
+    text-align: center;
+}
+.LayoutTableTabActive
+{
+    cursor: default;
+    color: #666;
+    background: #F4F4F4 url(/EloquaImages/TabActive.gif) no-repeat top left;
+}
+.LayoutTableTabInActive
+{
+    cursor: pointer;
+    color: #000;
+    background:#F4F4F4 url(/EloquaImages/TabInActive.gif) no-repeat top left;
+}
+
+.LayoutTableToolbar
+{
+    background-color:#BDB9AE;
+    font-weight: bold;
+    color: White;
+    /*Nadeem: FormProcessing manager save button padding from right increased from 2px*/
+    padding-right: 6px;
+}
+
+.LayoutTableTitle, .LayoutTableTitleCell
+{
+    font-family:Tahoma,Arial,Helvetica;
+    font-size:12pt;
+    font-weight:bold;
+    color:white;
+    background-image:url(/EloquaImages/background_toolheader1.jpg);
+    width: 100%;
+}
+
+.LayoutTableTitle { height: 38px; }
+
+.LayoutTableTitle td { padding-left:15px;}
+
+.LayoutTableTitleUX3, 
+.LayoutTableTitleCellUX3, 
+.LayoutTableTitleCellUX3 td span
+{
+    font-family:Tahoma;
+	background: url(/eloquaimages/getstarted_header_background.jpg) repeat-x;
+	/*[~VS] setting the width to auto for Dashboards menu item*/
+	width: auto;
+	height: 45px;
+	color: Black;
+	vertical-align:middle;
+	font-size: 20pt;
+}
+.LayoutTableTitle
+{
+	padding-right:10px;
+}
+
+.LayoutTableTitleCellUX3, .LayoutTablesubTitle td { padding-left:22px; }
+
+
+.LayoutTablesubTitle
+{
+	background-color: #DEECFA;
+	height:24px;
+	vertical-align:middle;
+}
+.LayoutTablesubTitle, .LayoutTablesubTitle td
+{
+	color: Black;
+	font-family: Tahoma;
+	font-size: 9pt;
+}
+.LayoutTablesubTitle td
+{
+	border-top:1px solid #a6b7c3;
+	border-bottom:1px solid #a6b7c3;
+}
+
+.LayoutTableRowStart
+{
+	/*
+    [~VS] commenting the width  
+	width:90%;
+	*/
+}
+
+.ListTableRow1Highlight, .ListTableRow0Highlight
+{
+	height:24px;
+	background-color:#dee7f7;
+	border-bottom: solid 1px  #C4C4C4;
+}
+
+.InformationBox, .AlertBox, .WarningBox, .PreviewBox, .ErrorBox, .TipBox, .SuccessBox
+{
+    vertical-align: top;
+    height: 20px;
+}
+
+.LayoutTableStepActive, .LayoutTableStepInActive
+{
+    text-align:center;
+    height: 37px;
+    cursor: default;
+    vertical-align: middle;
+}
+
+.LayoutTableStepActive
+{
+    color: #FFFFFF;
+    background:url('/EloquaImages/Icons/wizardstepactive.jpg') repeat-x;
+}
+
+.LayoutTableStepInActive
+{
+    color: #D0CDC2;
+    background:url('/EloquaImages/Icons/wizardstepinactive.jpg') repeat-x;
+}
+
+.LayoutTableStepNumber
+{
+    text-align:center;
+    vertical-align: middle;
+    font-size:14pt;
+    padding-left:10px;
+    padding-right:8px;
+}
+
+.DashboardDisplayItem0, .DashboardDisplayItem1, .DashboardDisplayItem2, .DashboardDisplayItem3
+{
+    margin-bottom: 10px;
+    overflow-y: hidden;
+    margin-right: 4px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#888888,direction=135, strength=5);
+
+}
+.DashboardColumnContainer1, .DashboardColumnContainer2, .DashboardColumnContainer3
+{
+	display: inline-block;
+	vertical-align:top;
+	padding: 0 0 0 10;
+	visibility: hidden;	
+}
+.DashboardColumnContainer1
+{
+	width:99%;
+}
+.DashboardColumnContainer2
+{
+	width:48%;
+}
+.DashboardColumnContainer3
+{
+	width:32%;
+}
+.DashboardItemContainer
+{
+	display:inline-block;
+	width:100%;
+	height:auto;
+	
+	visibility: hidden;
+}
+.DashboardDependentParam 
+{
+	font-size:8pt;
+    font-weight:bold;
+    text-align:center;
+	padding: 5 5 5 5;
+	position: relative;
+}
+.DashboardDependentParamDark
+{
+	font-size:8pt;
+    font-weight:bold;
+    text-align:center;
+	padding: 5 5 5 5;
+	position: relative;
+	background-color: #E6E5E2;
+}
+.DashboardItem
+{
+	width: 400px;
+	height: 400px;
+}
+.DashboardBody
+{
+	padding: 0 0 0 0;
+	vertical-align: bottom;
+	position: relative;
+	background-color:#E3E3E3;
+}
+.DashboardBodyWhite
+{
+	padding: 0 0 0 0;
+	vertical-align: bottom;
+	position: relative;
+	background-color:White;
+}
+.DashboardCollapsableDiv
+{
+width:100%;
+height:100%;
+}
+
+/* NEW START */
+	.ToolTipTopLeft, .ToolTipTopMiddle, .ToolTipTopRight, .ToolTipMiddleLeft, .ToolTipBody,
+	.ToolTipMiddleRight, .ToolTipBottomLeft, .ToolTipBottomMiddle, .ToolTipBottomRight
+	{
+		filter: alpha(opacity=85);
+		-moz-opacity: .85;
+	}
+	.ToolTip
+	{
+		z-index:99;
+		display:none;
+		position: absolute;
+		color: White;
+	}
+	.ToolTipTopLeft
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipTopLeft.png);
+	}
+	.ToolTipTopMiddle
+	{
+		height:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipTopMiddle.png);
+		background-repeat: repeat-x;
+	}
+	.ToolTipTopRight 
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipTopRight.png);
+	}
+	.ToolTipMiddleLeft
+	{
+		width:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipMiddleLeft.png);
+		background-repeat: repeat-y;
+	}
+	.ToolTipBody 
+	{
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipBody.png);
+		background-repeat: repeat;
+	}
+	.ToolTipMiddleRight
+	{
+		width:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipMiddleRight.png);
+		background-repeat: repeat-y;
+	}
+	.ToolTipBottomLeft
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipBottomLeft.png);
+	}
+	.ToolTipBottomMiddle
+	{
+		height:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipBottomMiddle.png);
+		background-repeat: repeat-x;
+	}
+	.ToolTipBottomRight 
+	{
+		width:12px;
+		height:12px;
+		background-image:url(/eloquaimages/DashboardFrame/ToolTipBottomRight.png);
+	}
+	.DashboardHeaderLeft, .DashboardHeaderMiddle, .DashboardHeaderRight,
+	.DashboardNoBorderLeftSide, .DashboardNoBorderRightSide,
+	.DashboardFooterLeft, .DashboardFooterMiddle, .DashboardFooterRight,
+	.DashboardFooterLeftWhite, .DashboardFooterMiddleWhite, .DashboardFooterRightWhite
+	{
+		vertical-align: top;
+		font-family:Tahoma,Arial,Helvetica;
+		font-size:8pt;
+	}
+	.DashboardHeaderLeft 
+	{
+		width:25px;
+		height:24px;
+		padding: 1 0 0 0;
+		background-image:url(/eloquaimages/DashboardFrame/top_left.gif);
+		background-repeat: no-repeat;
+		font-weight:bold; 
+	}
+	.DashboardHeaderMiddle 
+	{
+		height: 22px;
+		padding: 3 0 0 0;
+		background-image: url(/eloquaimages/DashboardFrame/top_mid.gif);
+		background-position:left top;
+		background-repeat:repeat-x;
+		overflow: hidden;
+		cursor: default;
+		text-overflow: ellipsis;
+		font-size:10pt;
+		font-weight:bold; 
+		color: White;
+		white-space:nowrap;
+		display: inline-block;
+	}
+	.DashboardHeaderMiddleTD 
+	{
+		background-image: url(/eloquaimages/DashboardFrame/top_mid.gif);
+		background-position:left top;
+		background-repeat:repeat-x;
+	}
+	.DashboardHeaderRight
+	{
+		width:135px;
+		height:24px;
+		padding: 1 0 0 0;
+		background-image: url(/eloquaimages/DashboardFrame/top_right.gif);
+		background-repeat: no-repeat;
+		background-position:right top;
+		color: White;
+	}
+	.DashboardNoBorderLeftSide 
+	{
+		width:1px;
+		height:100%;
+		background-image: url(/eloquaimages/DashboardFrame/middle_left.gif);
+		background-repeat:repeat;
+		background-position: left top;
+	}
+	.DashboardNoBorderRightSide 
+	{
+		width:1px;
+		height:100%;
+		background-image: url(/eloquaimages/DashboardFrame/middle_right.gif);
+		background-repeat:repeat;
+		background-position: right top;
+	}
+	.DashboardFooterLeft
+	{
+		width:25px;
+		height:15px;
+		background-image: url(/eloquaimages/DashboardFrame/bottom_left.gif);
+		background-repeat: no-repeat;
+		background-position:left bottom;
+	}
+	.DashboardFooterMiddle
+	{
+		height:15px;
+		background-image: url(/eloquaimages/DashboardFrame/bottom_mid.gif);
+		background-repeat:repeat;
+		background-position:right bottom;
+	}
+	.DashboardFooterRight
+	{
+		width:15px;
+		height:15px;
+		background-image: url(/eloquaimages/DashboardFrame/bottom_right.gif);
+		background-repeat: no-repeat;
+		background-position:right bottom;
+	}
+	.DashboardFooterLeftWhite
+	{
+		width:25px;
+		height:15px;
+		background-image: url(/eloquaimages/DashboardFrame/bottom_left_white.gif);
+		background-repeat: no-repeat;
+		background-position:left bottom;
+	}
+	.DashboardFooterMiddleWhite
+	{
+		height:15px;
+		background-image: url(/eloquaimages/DashboardFrame/bottom_mid_white.gif);
+		background-repeat:repeat;
+		background-position:right bottom;
+	}
+	.DashboardFooterRightWhite
+	{
+		width:15px;
+		height:15px;
+		background-image: url(/eloquaimages/DashboardFrame/bottom_right_white.gif);
+		background-repeat: no-repeat;
+		background-position:right bottom;
+	}
+/* NEW END */
+
+.DashboardItemDescription
+{
+    font-family:Tahoma,Arial,Helvetica;
+    font-size:8pt;
+    margin-left: 0px;
+    margin-right: 0px; 
+    margin-bottom: 0px;
+    margin-top: -2px;
+    display: block;
+    padding: 0 20 0 20;
+    height: 28px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+.DashboardItemDescriptionDark
+{
+    font-family:Tahoma,Arial,Helvetica;
+    font-size:8pt;
+    margin-left: 0px;
+    margin-right: 0px; 
+    margin-bottom: 0px;
+    margin-top: -2px;
+    background-color: #E6E5E2;
+    display: block; 
+    padding: 0 20 0 20;
+    height: 28px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.DashboardItemCacheInfo
+{
+    font-family:Tahoma,Arial,Helvetica;
+    font-size:8pt;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+	display: block; 
+	padding: 3 0 3 20;
+	background-color: #E3E3E3;
+}
+.DashboardItemCacheInfoDark
+{
+    font-family:Tahoma,Arial,Helvetica;
+    font-size:8pt;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+	display: block; 
+	background-color: #E6E5E2;
+	padding: 5 20 0 20;
+}
+.DashboardActionsMenu
+{
+	color: black;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+	height: 22px;
+	border: solid 1px red;
+	padding-bottom: 10px;
+	border-style: none;
+	padding: 2 2 2 2;
+}
+.ActionImage {vertical-align: middle;}
+
+.ActionImageDisabled
+{
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	vertical-align: middle;
+}
+
+.SubMenu, .TopMenu, .ToolbarMenu, .MenuItem, .ButtonItem,
+.SubMenuHighlight, .TopMenuHighlight, .ToolbarMenuHighlight, .MenuItemHighlight, .ButtonItemHighlight
+{
+    height: 23px;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.ContextMenu, .ContextMenuHighlight {
+    height: 16px;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.TopMenuDark, .TopMenuDarkHighlight 
+{
+	color: black;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.SubMenu, .ToolbarMenu, .ContextMenu, .MenuItem, .ButtonItem, .TopMenuDark, .TopMenuWhite, .TopMenuDarkHighlight { border-style: none; }
+.ContextMenu, .TopMenuDarkHighlight { padding: 1 1 1 1; }
+/*.ContextMenu img { margin-left:1px; margin-right:1px;} Needed for STRICT Doc Type */
+#MenuReference img { margin-left:0px; margin-right:0px;} /*TreeView Context Menu's are weird */
+.SubMenu, .TopMenu, .ToolbarMenu, .MenuItem, .ButtonItem { padding: 3 3 3 3; }
+
+.SubMenuHighlight, .TopMenuHighlight, .ToolbarMenuHighlight, .ContextMenuHighlight, .MenuItemHighlight, .ButtonItemHighlight, .TopMenuDarkHighlight
+{
+    /* highlighted version */
+	border-color: #6396ce;
+	border-style: solid;
+	border-width: 1px;
+	color: #315d84;
+	background-color: #dee7f7;
+}
+.ContextMenuHighlight { padding: 0 0 0 0; }
+.SubMenuHighlight, .TopMenuHighlight, .ToolbarMenuHighlight, .MenuItemHighlight, .ButtonItemHighlight, .TopMenuDark, .TopMenuWhite{ padding: 2 2 2 2; }
+
+/* Top Menus & Toolbars are similar in colouring */
+.TopMenu, .ToolbarMenu { color: White; }
+.ToolbarMenu, .ToolbarMenuHighlight { font-weight: bold; }
+
+.MenuItem, .SubMenu, .MenuItemHighlight, .SubMenuHighlight
+{
+    /* Items within a menu */
+    width: 100%;
+    margin: 2 2 2 2;
+}
+
+/* UX3 */
+.TopMenu, .TopMenuHighlight
+{
+	display:inline-block;
+	height:100%;
+	text-align:center;
+} 
+
+.TopMenuSelect
+{
+    height: 28px;
+    background-color: #999999;
+    border: solid 1px #AAAAAA;
+    margin: 5 5 5 0;
+    padding: 1 5 1 5;
+    color: #CFCFCF;
+    vertical-align: middle;
+}
+
+/* Specialized Buttons */
+.ArrowDown, .ArrowDownHighlight, .ArrowUp, .ArrowUpHighlight
+{
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    white-space: nowrap;
+    vertical-align: middle;
+	border-style: none;
+    padding: 1px 0px 0px 22px;
+    text-decoration: none;
+}
+
+.ArrowUp { background-image: url(/EloquaImages/Icons/cleanarrowupux2blue.gif); }
+.ArrowUpHighlight { background-image: url(/EloquaImages/Icons/cleanarrowupux2red.gif); }
+.ArrowDown { background-image: url(/EloquaImages/Icons/cleanarrowdownux2blue.gif); }
+.ArrowDownHighlight { background-image: url(/EloquaImages/Icons/cleanarrowdownux2red.gif); }
+
+.EloquaMenuCollection {visibility: hidden;}
+
+.EloquaMenuOld {
+    z-index: 500;
+    position: absolute;
+    display: none;
+    padding: 0px 2px 0px 2px;
+    background-color: #e0e0e0;
+    border: 1px solid #999999;
+    color: black;
+	height:auto;
+}
+
+.LoadingDiv {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+	padding: 3 8 3 8;
+    vertical-align: middle;
+}
+
+/* Natural Language Components */
+.NLLink {
+    text-decoration: underline;
+    color: #6676ce;
+    cursor: pointer;
+}
+
+.NLDecision {
+    width: 1%;
+    height: 25px;
+    border-right: solid 1px #999999;
+    padding-right: 10px;
+}
+.NLDecision select { width: 110px; }
+
+.NLItems { padding-left: 10px; }
+.NLItems Span Input { vertical-align: middle; }
+
+Input { vertical-align: middle; }
+
+/* Content Engineer */
+.CEHeader
+{
+	font-size:20pt; 
+	font-family:Tahoma,Arial,Helvetica; 
+	padding-left:22px;
+}
+
+.CEStepHeader
+{
+	font-family:Tahoma, Arial, Helvetica;
+	color:#4E6F87;
+	padding-top: 14px;
+	padding-bottom: 4px;
+	font-size:9pt;
+	border-bottom: solid 1px #4E6F87;
+}
+
+.BlueHRBar
+{
+	color:#4E6F87;
+	height:1px;
+}
+
+.CEInstruction
+{
+	font-style: italic;
+	font-size:8pt;
+	font-family: Arial, Helvetica;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 14pt;
+}
+
+.CEInformation
+{
+	font-weight: bold;
+	font-size:8pt;
+	font-family: Arial, Helvetica;
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+}
+
+.CESubheader
+{
+	color:#4E6F87;
+	font-size:9pt;
+	font-family:Tahoma, Arial, Helvetica;
+	padding-top: 12px;
+	padding-bottom: 8px;
+
+
+}
+
+.CEQuestion
+{
+	padding-bottom: 6px;
+}
+
+.CEYes
+{
+	font-size:8pt;
+	padding-right:10px;
+}
+
+.MainTable
+{
+	padding-top:5px; 
+	width:100%;
+	height:100%;
+}
+
+.UploadFileBox
+{
+	padding:10px; 
+	border: #999999 2px solid; 
+	background-color:#ffffff;
+	width:475px;
+	text-align:center;	
+}
+
+.WarningBox2
+{
+	padding:10px 70px 10px 70px; 
+	border-top: #4E6F87 1px solid; 
+	border-bottom: #4E6F87 1px solid; 
+	background-color:#ffffff;
+}
+
+.WarningText
+{
+	font-style: italic;
+	font-size: 8pt;
+	font-family: Arial, Helvetica;
+	color: #a42242;
+	line-height: 14pt;
+
+}
+
+.DivNoBorder
+{
+	width:520px;
+	text-align:left;
+}
+
+.DivWithBorder
+{
+	padding:10px; 
+	border: #999999 2px solid; 
+	width:450px;
+}
+
+.BestPractice
+{
+	border-top: #4E6F87 1px solid; 
+	border-bottom: #4E6F87 1px solid; 
+	font-style: italic;
+	font-size:8pt;
+	font-family: Arial, Helvetica;
+}
+
+.ChildFramebg
+{
+	background-color:#eff3d7;
+/*		background-color:#DEECFA;*/
+	padding:0px;
+	margin:0px;
+	border-width:1px 0px 1px 0px; 
+	border-style:solid; 
+	border-color:#577B95;
+}
+
+.CEShowFileBox
+{
+	width:555px;
+	height:70px;
+	overflow:auto; 
+	background-color: #d4d4d4; 
+	border-style:inset; 
+	white-space: nowrap;
+}
+
+.ChildFramebgIntro
+{
+	background-color:#eff3d7;
+	padding:0px;
+	margin:0px;
+	border-width:1px 0px 1px 0px; 
+	border-style:solid; 
+	border-color:#577B95;
+}
+
+.PgCtrlSpan
+{
+	font-family:arial,helvetica,sans-serif; 
+	font-size:11px; color: #000000; 
+	height:24px; 
+	line-height:24px; 
+	background:#F4F4F4; 
+	border-top:1px black solid; 
+	border-bottom:1px black solid;
+	/*Nadeem: Done for ImageSelector found in: https://devsecure.eloquacorp.com/Agent/ModalLoad.aspx?/eloquaroot/EloquaTool/EloquaToolSelect.aspx%3FOpenInModal=True%26ToolType=imagebyfullurl4email%26ImageURL=&Title=Image%20Selector*/
+	float:right;
+}
+
+.PgCtrl
+{
+	text-decoration:none; line-height:18px; border:1px solid #999999;  background-color:#dddddd;
+}
+
+.PgCtrl:hover
+{
+	text-decoration:none; line-height:18px; border:1px solid #000000;  background-color:#dee7f7;
+}
+
+.PgCtrl:visited
+{
+	text-decoration:none;
+}
+
+td.WarningBox2 .WarningTitle {
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-right: 5px;
+}
+
+.NotificationBoxNew {
+	 padding:10px 70px 10px 70px; 
+	 border-top: #4E6F87 1px solid; 
+	 border-bottom: #4E6F87 1px solid; 
+	 background-color:#ffffff;
+}
+
+.NotificationBoxNew .NotifyTitle {
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-right: 5px;
+}
+
+.NotificationBoxNew .NotifyText {
+	 font-style: italic;
+	 font-size: 8pt;
+	 font-family: Arial, Helvetica;
+	 color: #a42242;
+	 line-height: 14pt;
+}
+/* ===================== */
+
+/* Buttons Look Like Buttons - Bottom Toolbar */
+.LayoutTableToolbar .ButtonItem, .LayoutTableToolbar .ButtonItemHighlight
+{
+	height:20px;
+	padding:  2 10 5 5;
+	font-size: 8pt;
+	font-weight:normal;
+	color: #425e73;
+	border:2px outset white;
+	background-color: #c9e1fa;
+	background-image: url(/EloquaImages/icons/button_out.gif);
+	background-position: center center;
+	background-repeat:repeat-x;
+}
+.LayoutTableToolbar .ButtonItemHighlight
+{
+	color: black;
+	background-image: url(/EloquaImages/icons/button_over.gif);
+}
+
+/*~VS:Resetting MenuItem border-style.*/
+.MenuItem
+{
+	border-style:solid;
+	border-width : 1px;
+	border-color:#e0e0e0;
+}
+
+.TopMenuDark
+{
+	padding:4 4 4 4;
+}
+.TopMenuDarkHighlight 
+{
+	padding:4 3 5 3;
+}
+.TopMenu
+{
+	height:auto;
+	float:left;
+}
+.TopMenuHighlight 
+{
+	height:auto;
+	float:left;
+}
+
+.ButtonItem
+{
+	/*VS:setting the padding for Bttn item for FormProcessing*/
+	padding:4 3 4 3;
+	-moz-user-select: none;
+}
+
+.ButtonItemHighlight
+{
+	/*VS:setting the padding for Bttn item for FormProcessing*/
+	padding:4 2 4 2;
+	-moz-user-select: none;
+}
+
+/*[~Nadeem] changes for text-overflow:ellipses*/
+.ellipsis{
+   white-space:nowrap;
+   overflow:hidden;
+   display:inline-block;
+}
+
+.ellipsis {
+   clear:both;
+}
+
+.ellipsis:after {
+   content: "...";
+}
+
+/*end*/
+
+/*[~VS] adding css for modal dialog*/
+
+/* screen */
+div#eScreen {
+	
+}
+/* dialog window */
+table.dialogWindow {
+	background-color: white;
+	border-collapse:collapse;
+}
+/* dialog window header */
+.dialogWindow th {
+	background-color: #0055E5;
+	cursor: move;
+	color:White;
+	font-size:9pt;
+	font-family:Tahoma, Arial, Helvetica;
+	border-collapse:collapse;
+	padding-left:7px;
+	height:20px;
+}
+/* dialog window header icon */
+.dialogWindow th img {
+	cursor: pointer;
+	margin: 1px 3px 0 0;
+	border-collapse:collapse;
+	height:18px;
+}
+
+/* dialog window body */
+.dialogWindow td {
+	border: 0;
+	padding: 0;
+	border-collapse:collapse;
+}
+/* dialog window iframe */
+.dialogWindow iframe {
+	border: 0;
+	margin:0;
+	border-collapse:collapse;
+}
+
+

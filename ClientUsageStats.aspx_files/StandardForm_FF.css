@@ -1,0 +1,197 @@
+div.formStandard {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	margin-top: 11px;
+}
+
+div.formBlock {
+	width: 100%;
+	/*height:25px;
+	overflow:visible;*/
+	margin-left:21px;
+}
+
+div.standardFormList {
+	width: 100%;
+}
+
+div.columnLeft {
+	width:312px;
+	vertical-align: top;
+	float: left;
+}
+	
+div.columnRight {
+	margin-left: 23px;
+	float: left;
+}
+
+div.segmentFormLabel {
+	height: 28px;
+	padding-top: 6px;
+	padding-bottom: 2px;
+	vertical-align: top;
+}
+
+div.segmentFormField {
+	height: 28px;
+	width: 325px;
+	padding-top: 3px;
+	vertical-align: middle;
+	float: left;
+}
+
+div.segmentFormField select,
+div.segmentFormField input {
+	width: 325px;
+	font-size:11px;
+	font-family:arial;
+	vertical-align: middle;
+}
+
+div.QA div.columnRight {
+	padding-top: 3px;
+	width: 325px;
+}
+
+div.segmentRadio {
+	height: 28px;
+	vertical-align: top;
+	width: 80px;
+	float: left;
+}
+
+div.segmentRadio input {
+	width: 20px;
+}	
+
+div.segmentRadio input.yes {
+	margin-right: 3px;
+}
+div.segmentRadio input.no {
+	margin-left: 14px;
+}
+
+div.segmentNegativeResponse {
+	padding-top: 3px;
+	padding-bottom: 11px;
+	height: 28px;
+	width: 242px;
+	vertical-align: top;
+	display: inline;
+}
+
+div.optionSet div.columnRight {
+	width: 325px;
+	padding-top: 3px;
+}
+div.segmentCheckbox {
+	width: 23px;
+	display: inline;
+	vertical-align: middle;
+}
+div.segmentResponse {
+	width: 302px;
+	display: inline;
+	vertical-align: top;
+	padding-top: 3px;
+}
+
+
+div.ListSimple {
+	width:370px;
+
+}
+
+div.ListSimple div.ListBlock {
+	height: 25px;
+	position:relative;
+}
+
+div.ListSimple div.Disabled {
+	color: gray;
+}
+
+div.ListSimple div.LineItem {
+	height: 20px;
+}
+
+div.ListItem {
+	height: 14px;
+	line-height: 14px;
+	padding-left: 0px;
+}
+
+div.ListSimple div.ListArea {
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	overflow: auto;
+	position: relative;
+}
+
+div.formBlock font {
+	height: 24px;
+	padding-top: 7px;
+	font-size: 11px;
+}
+
+/*
+div.formBlock select.fullSelectList {
+	width: 370px;
+}
+*/
+
+div.formBlock input.fullInputText {
+	width: 370px;
+	height: 20px;
+}
+
+div.ListMakerWidget {
+	position: relative;
+	left: -20px;
+	top: 0px;
+	width:390px;	
+}
+
+div.ListFeeder {
+	position: relative;
+	left: 0px;
+	top: 0px;	
+}
+
+div.ListMakerWidget div.WidgetBlock {
+	height: 28px;
+	padding-left: 20px;
+	width:390px;
+}
+
+div.ListMakerWidget div.TopLine {
+	background-image: url(/eloquaimages/DNSManagerBoxTopLine.jpg);
+}
+
+div.ListMakerWidget div.MiddleLine {
+	background-image: url(/eloquaimages/DNSManagerBoxMiddleLine.jpg);
+}
+
+div.ListMakerWidget div.BottomLine {
+	background-image: url(/eloquaimages/DNSManagerBoxBottomLine.jpg);
+	height: 28px;
+}
+
+div.formBlock input {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+	vertical-align: middle;
+}
+
+div.formBlock select {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+	vertical-align: middle;
+	/*[~VS]changing text-align:right to text-align:left for dropdown list 
+	to show options left aligned */	
+	text-align: left;
+}
