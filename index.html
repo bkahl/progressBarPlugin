@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ie"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js fancy"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,66 +11,26 @@
         <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link href="ClientUsageStats.aspx_files/bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="css/progress-bar.css">
     </head>
 
     <body>
-	
-		<div class="container">
-			
-		    <!-- Status -->
-	        <div class="row">
-	            <div class="span7">
-                
-	                <br/>
-	                <br/>
-                
-	                 <div>
-	                    <h6>
-	                      <span style="float: left; margin-right:5px; text-decoration: none;">Current Contact Usage:</span>  
-	                      <span class="progressBarData" style="float: left;">&nbsp</span>
-                      
-	                      <!--[if IE]>
-	                      <span class="flag" style="float: right; width: 335px; text-align: right; right: 130px; position: relative;"></span>
-	                      -->
-	                      <!--[if !IE]>
-	                      <span class="flag" style="float: right;"></span>
-	                      -->
-                      
-	                      <span class="flag"></span>
-	                    </h6> 
-	                  </div>
-                
-	                <div style="clear: both;"></div>
-                
-					    <div id="progress-bar" class="progress">
-	                    <div class="bar"></div>	
-	                </div>
-                
-	            </div>
-	        </div>
-
-	        <br/>
-        
-	        <!-- Text --> 
-	        <div class="row">
-	            <div class="span7">
-	              <div id="under-message" class="alert alert-success" style="display: none;">
-	                You're well within your limit and have room to grow. Visit Topliners for some ideas! 
-	              </div>
-	              <div id="caution-message" class="alert" style="display: none;">
-	                Approaching the top of your contact band! You currently have <span id="caution-amount" style="font-size: 15px; font-weight: bold;"></span> contacts remaining. Contact your Account Director or Eloqua Support for options before you exceed your band!
-	              </div>
-	              <div id="warning-message" class="alert alert-error" style="display: none;">
-	                You've exceeded expectations and are currently above your contact band by <span id="caution-amount" style="font-size: 15px; font-weight: bold;"></span> contacts. It's time to speak with your Account Director or Eloqua Support to proceed with upgrading.
-	              </div>
-	            </div>
-	        </div>
-
-		</div>
+		<div id="1" style="width: 600px;"></div>
+		
+		<div data-id="3" class="progressBar" data-type="subscription" style="width: 100%;" data-usage="150" data-max="100" data-title="subscription" data-under="your under" data-caution="getting close" data-warning="youve gone over"></div>
 		
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="js/jquery.progressBar.js"></script>
+		<script>
+			$().ready(function(){
+				
+				$("#1").progressBar({
+					currentContactUsage: 75,
+					currentContactEntitlement: 100,
+					type: 'subscription'
+				});
+				
+			});
+		</script>
     </body>
 </html>

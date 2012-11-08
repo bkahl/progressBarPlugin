@@ -1,7 +1,9 @@
 /*bootstrap.css*/
 body{margin:0 auto;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#333333;width: 940px;}
-body.fancy{background:#3b3c43 url('../images/launchpad-page-bg.png');}
-body.ie{background-color:#fff; position: relative; padding-left: 200px;}
+.fancy{background:#3b3c43 url('../images/launchpad-page-bg.png');}
+.ie{background-color:#fff; position: relative; padding-left: 200px;}
+
+.span7{width:100%;}
 
 p{margin:0 0 9px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px; line-height:18px;}
 .fancy p{color: #fff;}
@@ -21,6 +23,8 @@ h2{font-size:24px; line-height:36px; }
   padding-left: 20px;
 }
 
+h6{font-size:12px;color:#999999;text-transform:uppercase;}
+
 .ie #under-message,
 .ie #caution-message,
 .ie #warning-message{
@@ -32,6 +36,10 @@ h2.title{
   margin: 10px 0;
   text-align: center;
 }
+
+.row{margin-left:-20px;*zoom:1;}.row:before,.row:after{display:table;content:"";}
+.row:after{clear:both;}
+[class*="span"]{float:left;margin-left:20px;}
 
 .progress{
   overflow:hidden;
@@ -120,6 +128,50 @@ h2.title{
 	margin-bottom: 5px;
 }
 
+.flag img{
+	width: 16px;
+	height: 16px;
+	position: relative; 
+	top: 3px;
+}
+
+.alert{padding:8px 35px 8px 14px;margin-bottom:18px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#fcf8e3;border:1px solid #fbeed5;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.alert,.alert-heading{color:#c09853;}
+.alert .close{position:relative;top:-2px;right:-21px;line-height:18px;}
+.alert-success{background-color:#dff0d8;border-color:#d6e9c6;}
+.alert-success,.alert-success .alert-heading{color:#468847;}
+.alert-danger,.alert-error{background-color:#f2dede;border-color:#eed3d7;}
+.alert-danger,.alert-error,.alert-danger .alert-heading,.alert-error .alert-heading{color:#b94a48;}
+.alert-info{background-color:#d9edf7;border-color:#bce8f1;}
+.alert-info,.alert-info .alert-heading{color:#3a87ad;}
+.alert-block{padding-top:14px;padding-bottom:14px;}
+.alert-block>p,.alert-block>ul{margin-bottom:0;}
+.alert-block p+p{margin-top:5px;}
+
+.title{
+	float: left; 
+	margin-right:5px; 
+	text-decoration: none;
+}
+
+.progressBarData{
+	float: left;
+}
+
+.under-message,
+.caution-message,
+.warning-message{
+	display: none;
+}
+
+.caution-amount{
+	font-size: 15px; 
+	font-weight: bold;
+}
+
+.calculatedAmount{
+	margin-left: 5px;
+}
 
 
 
