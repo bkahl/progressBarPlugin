@@ -1,7 +1,12 @@
 # What is progressBarPlugin?
 
 progressBarPlugin is a jQjuery plugin that allows user's to dynamically load as many progress bars within
-a webpage when needed by specifying it's selector id or by using jquery's data().
+a webpage when needed by specifying it's selector id or by using jquery's data().  Currently, there's only one "type" of progress bar and that is the "subscription" progress bar.  You'll read more about it below.  
+
+1. Subscription Progress Bar
+	- allows users to keep track of their usage so that they don't go over their plan.
+	- (ex) AT&T could use this to allow their client's to keep track of their data plan, so they know when
+	       they've exceeded their GB (Giga Bytes) for the month.
 
 ## How to Install?
 
@@ -120,10 +125,42 @@ like so:
 ```
 ### Things To Note About quotePlugin Properties
 
-1. layout : Can take the following options, (top,left,bottom,right,width).
-2. firstLine : Takes the first line of the quote, this property has a different font style then the message.
-3. message : Main quote after the first line.
-4. fromWho : Author name of the quote.
-5. arrowTarget : Can take the following options, (top,left,bottom,right).
-6. arrowImg : Can take the following options, (default, flipped).
-7. arrowPixelPositioning : Can take any numeric value to position the tail of the speech bubble around the quote.
+1. currentContactUsage : any number | this is the amount being used by the user
+2. currentContactEntitlement : any number. | this is the max amount the user can use before being charged extra
+3. background : ie,fancy | ie background is loaded for ie users to fix some styling, defaults to fancy though
+4. title : title of progress bar
+5. type : subscription | only option for now, left it open for anyone to add addition ones
+6. theme : none for now
+7. message.success : message you want to show when user is way under
+8. message.danger : message you want to show when user is getting close to their max amount
+9. message.error : message you want to show when user when they've hit or gone over their amount
+
+FYI : with option 7,8 or 9, you can pass it the following tag:
+
+```html
+	<span class='alert-amount'></span>
+```
+
+like so: 
+
+```html
+	<div class="progressBar" data-id="1" data-success="<span class='alert-amount'></span>" data-danger="<span class='alert-amount'></span>" data-error="<span class='alert-amount'></span>"></div>
+```
+or:
+
+```html
+<script>
+	$().ready(function() {
+		$('#progressBar1').progressBar({
+		   	message: {
+				success: "your under your amount by <span class='alert-amount'></span> mb",
+				danger: "getting close to your max amount of gb, youve used <span class='alert-amount'></span> mb",
+				error: "youve gone over your gb by <span class='alert-amount'></span> amount"
+			},
+		});
+	});
+</script>
+```
+NOTE: by default the progressBarPlugin calculates the remaining amount for the user and passes it to the following selector "<span class='alert-amount'></span>". So, if you specify that tag like so in the above 2 examples, it will append the remaining number into the alerted message underneath the progress bar.
+
+
