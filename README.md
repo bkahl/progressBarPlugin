@@ -161,6 +161,6 @@ or:
 	});
 </script>
 ```
-NOTE: by default the progressBarPlugin calculates the remaining amount for the user and passes it to the following selector "<span class='alert-amount'></span>". So, if you specify that tag like so in the above 2 examples, it will append the remaining number into the alerted message underneath the progress bar.
+NOTE: by default the progressBarPlugin calculates the remaining amount for the user and passes it to the listed above selector.  So, if you specify that tag like so in the above 2 examples, it will append the remaining number into the alerted message underneath the progress bar.
 
 
