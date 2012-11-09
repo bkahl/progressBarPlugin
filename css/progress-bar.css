@@ -194,9 +194,9 @@ body{
 			display: none;
 		}
 
-		.ie .success-message,
-		.ie .danger-message,
-		.ie .error-message{
+		.ie .progress-bar.subscription .success-message,
+		.ie .progress-bar.subscription .danger-message,
+		.ie .progress-bar.subscription .error-message{
 		  position: relative;
 		  padding-left: 35px;
 		}
