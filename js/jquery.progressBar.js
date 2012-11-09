@@ -4,36 +4,56 @@
  *	Description: dynamically creates a progress bar that shows 3 different
 				 colors "red","yellow","green" based upon size.
  **************************************************************************/
+
+// function that removes values from an array
+Array.prototype.remove= function(){
+    var what, a= arguments, L= a.length, ax;
+    while(L && this.length){
+        what= a[--L];
+        while((ax= this.indexOf(what))!= -1){
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+}
+
 function createProgressBar(id, opts){
 	
-	var elements;
+	var remaingingElement, remainingAmt;
 	
 	if( opts.background ){
 		$('html').removeClass('ie').removeClass('fancy');
 		$('body').addClass(opts.background);
 	}
 
+	console.log('location : ',window.navigator.appName);
+	
 	if( opts.type === "subscription" ){
+		
+		$(id.selector+' > .progress-bar').addClass('subscription');
+		
+		// add commas to numbers that need them and split into array removing any '-' values.
+		remainingAmt = opts.addCommas(Math.ceil(opts.currentContactUsage-opts.currentContactEntitlement)).split('');
+		remainingAmt = remainingAmt.remove('-').join('');
+		
 		if ( opts.percentageUsed() >= 100 ) {
-		    var img = "<img src='images/warning-flag.png'/><span class='calculatedAmount'></span>";
-		    $(id.selector+' .warning-message').show();
-		    $(id.selector+' .warning-message > span').text(opts.addCommas(Math.ceil(opts.currentContactUsage-opts.currentContactEntitlement)));
-		    $('#progress-bar-'+id.selectorValue).addClass('progress-danger');
-		    $(id.selector+' .flag').html(img);
-		    $(id.selector+' .calculatedAmount').text(opts.addCommas(Math.ceil(opts.currentContactUsage-opts.currentContactEntitlement)) + ' Over');
+		    remaingingElement = "<span class='remaining error-flag'></span><span class='remaining-amount'></span>";
+		    $(id.selector+' .error-message').show();
+		    $('#progress-bar-'+id.selectorValue).addClass('progress-error');
+		    $(id.selector+' .flag').html(remaingingElement);
+		    $(id.selector+' .remaining-amount').text(remainingAmt + ' Over');
 		} else if ( opts.percentageUsed() > 80) {
-		    var img = "<img src='images/caution-flag.png'/><span class='calculatedAmount'></span>";
-		    $(id.selector+' .caution-message').show();
-		    $(id.selector+' .caution-amount').text(opts.addCommas(Math.ceil(opts.currentContactEntitlement-opts.currentContactUsage)));
-		    $('#progress-bar-'+id.selectorValue).addClass('progress-info');
-		    $(id.selector+' .flag').html(img);
-		    $(id.selector+' .calculatedAmount').text(opts.addCommas(Math.ceil(opts.currentContactEntitlement-opts.currentContactUsage)) + ' Remaining');
+		    remaingingElement = "<span class='remaining danger-flag'></span><span class='remaining-amount'></span>";
+		    $(id.selector+' .danger-message').show();
+		    $('#progress-bar-'+id.selectorValue).addClass('progress-danger');
+		    $(id.selector+' .flag').html(remaingingElement);
+		    $(id.selector+' .remaining-amount').text(remainingAmt + ' Remaining');
 		} else {
-		    var img = "<img src='images/under-flag.png'/><span class='calculatedAmount'></span>";
-		    $(id.selector+' .under-message').show();
+		    remaingingElement = "<span class='remaining success-flag'></span><span class='remaining-amount'></span>";
+		    $(id.selector+' .success-message').show();
 		    $('#progress-bar-'+id.selectorValue).addClass('progress-success');
-		    $(id.selector+' .flag').html(img);
-		    $(id.selector+' .calculatedAmount').text(opts.addCommas(Math.ceil(opts.currentContactEntitlement-opts.currentContactUsage)) + ' Remaining');
+		    $(id.selector+' .flag').html(remaingingElement);
+		    $(id.selector+' .remaining-amount').text(remainingAmt + ' Remaining');
 		}
 
 		if(opts.percentageUsed() > 100){ 
@@ -45,7 +65,9 @@ function createProgressBar(id, opts){
 					.css({'color':'#3B3C43','font-size':'17px','width':opts.percentageUsed()+'%'});
 		} 
         
-		$(id.selector+' .progressBarData').text(opts.addCommas(Math.ceil(opts.percentageUsed()) + '% OF ' + opts.currentContactEntitlement));
+		$(id.selector+' .percentage-out-of').text(opts.addCommas(Math.ceil(opts.percentageUsed()) + '% OF ' + opts.currentContactEntitlement));
+		$(id.selector+' .alert-amount').text(remainingAmt);
+		
 	}else{}
 
 }
@@ -57,36 +79,25 @@ function createDefaultProgressBarMarkUp(id, opts){
 	if( opts.type === "subscription" ){
 		
 		element = "<div class='progress-bar'>";
-		    element += "<div class='row'>";
-		        element += "<div class='span7'>";
-					element += "<br/>";
-					element += "<br/>";
-					element += "<div>";
-						element += "<h6>";
-							element += "<span class='title'>"+opts.title+"</span>";
-							element += "<span class='progressBarData'>&nbsp</span>";
-							element += "<!--[if IE]>";
-							element += "<span class='flag' style='width: 335px; text-align: right; right: 130px; position: relative;'></span>";
-							element += "-->";
-							element += "<!--[if !IE]>";
-							element += "<span class='flag'></span>";
-							element += "-->";
-							element += "<span class='flag'></span>";
-						element += "</h6>";
-					element += "</div>";
-					element += "<div style='clear: both;'></div>";
-					element += "<div id='progress-bar-"+id.selectorValue+"' class='progress'>";
-						element += "<div class='bar'></div>";
-					element += "</div>  <!--close #progress-bar-"+id.selectorValue+"-->";
-				element += "</div> <!--close .span7-->";
+		    element += "<div class='row pg-bar-calculation'>";
+				element += "<div class='heading'>";
+					element += "<span class='title'>"+opts.title+"</span>";
+					element += "<span class='percentage-out-of'>&nbsp</span>";
+					element += "<!--[if IE]>";
+					element += "<span class='flag'></span>";
+					element += "-->";
+					element += "<!--[if gt IE 8]><!-->";
+					element += "<span class='flag'></span>";
+					element += "<!--<![endif]-->";
+				element += "</div>";
+				element += "<div id='progress-bar-"+id.selectorValue+"' class='progress'>";
+					element += "<div class='bar'></div>";
+				element += "</div>  <!--close #progress-bar-"+id.selectorValue+"-->";
 			element += "</div> <!--close .row-->";
-			element += "<br/>";
-			element += "<div class='row'>";
-				element += "<div class='span7'>";
-					element += "<div class='under-message alert alert-success'>"+opts.message.under+"</div>";
-					element += "<div class='caution-message alert'>"+opts.message.caution+"</div>";
-					element += "<div class='warning-message alert alert-error'>"+opts.message.warning+"</div>";
-				element += "</div> <!--close .span7-->";
+			element += "<div class='row pg-bar-alert-message'>";
+					element += "<p class='alert success-message'>"+opts.message.success+"</p>";
+					element += "<p class='alert danger-message'>"+opts.message.danger+"</p>";
+					element += "<p class='alert error-message'>"+opts.message.error+"</p>";
 			element += "</div> <!--close .row-->";
 		element += "</div> <!--close .progress-bar-->";
 		
@@ -106,13 +117,13 @@ function createDefaultProgressBarMarkUp(id, opts){
 			defaults = {
 		        currentContactUsage: 0,        		//contactusageData[0].count, //max
 		        currentContactEntitlement: 100,    	//entitlementsData[0].Count, //used
-		        background: null,         			//fancy or ie
 			    title: "CURRENT CONTACT USAGE:",
-				type: 'subscription',
+		        background: null,			        //ie and fancy,
+				theme: null,
 			   	message: {
-					under: "You're well within your limit and have room to grow.",
-					caution: "Approaching the top of your contact band! You currently have <span class='caution-amount'></span> contacts remaining.",
-					warning: "You've exceeded expectations and are currently above your contact band by <span class='caution-amount'></span> contacts."
+					success: "You're well within your limit and have room to grow. You currently have <span class='alert-amount'></span> contacts remaining.",
+					danger: "Approaching the top of your contact band! You currently have <span class='alert-amount'></span> contacts remaining.",
+					error: "You've exceeded expectations and are currently above your contact band by <span class='alert-amount'></span> contacts."
 				},
 		        percentageUsed: function(){
 		        	return (this.currentContactUsage/this.currentContactEntitlement)*100;
@@ -145,9 +156,9 @@ function createDefaultProgressBarMarkUp(id, opts){
 				    title: $this.data('title'),
 					type: $this.data('type'),
 					message: {
-						under: $this.data('under'),
-						caution: $this.data('caution'),
-						warning: $this.data('warning')
+						under: $this.data('success'),
+						caution: $this.data('danger'),
+						warning: $this.data('error')
 					}
 				};
 
@@ -177,13 +188,14 @@ function createDefaultProgressBarMarkUp(id, opts){
 		defaults = {
 	        currentContactUsage: 0,        		//contactusageData[0].count, //max
 	        currentContactEntitlement: 100,    	//entitlementsData[0].Count, //used
-	        background: null,         			//fancy or ie
+	        background: null,		        	//ie and fancy,
+			theme: null,
 		    title: "CURRENT CONTACT USAGE:",
 			type: 'subscription',
 		   	message: {
-				under: "You're well within your limit and have room to grow.",
-				caution: "Approaching the top of your contact band! You currently have <span class='caution-amount'></span> contacts remaining.",
-				warning: "You've exceeded expectations and are currently above your contact band by <span class='caution-amount'></span> contacts."
+				success: "You're well within your limit and have room to grow. You currently have <span class='alert-amount'></span> contacts remaining.",
+				danger: "Approaching the top of your contact band! You currently have <span class='alert-amount'></span> contacts remaining.",
+				error: "You've exceeded expectations and are currently above your contact band by <span class='alert-amount'></span> contacts."
 			},
 	        percentageUsed: function(){
 	        	return (this.currentContactUsage/this.currentContactEntitlement)*100;
