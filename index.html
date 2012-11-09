@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8 ie"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9 ie"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js fancy"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="ie"> <![endif]-->
+<!--[if IE 7]> <html class="ie"> <![endif]-->
+<!--[if IE 8]> <html class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="fancy"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -13,9 +13,21 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/progress-bar.css">
+	    <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+
     </head>
 
     <body>
+	
+	    <header class="header">
+	        <hgroup>
+	            <h1>Progress Bar Plugin</h1>
+	            <h2>A CSS3 Animated Subscription Progress Bar</h2>
+	        </hgroup>
+	    </header>
+	
+		<a href="https://github.com/bkahl/progressBarPlugin" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+		
 		<div id="1" style="width: 600px;"></div>
 		<div data-id="2" class="progressBar" data-type="subscription" style="width: 80%;" data-usage="85" data-max="100" data-title="subscription" data-success="your under" data-danger="getting close" data-error="youve gone over"></div>
 		<div data-id="3" class="progressBar" data-type="subscription" style="width: 100%;" data-usage="90000" data-max="100" data-title="subscription" data-success="your under" data-danger="getting close" data-error="youve gone over"></div>
