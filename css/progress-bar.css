@@ -9,7 +9,7 @@ body{
 	padding-left: 200px;
 }
 .fancy{
-	background:#3b3c43 url('../images/launchpad-page-bg.png'); 
+	background:#3b3c43 url('../images/fancy-background.png'); 
 	margin:0 auto;
 }
 
@@ -66,15 +66,15 @@ body{
 			}
 			
 			.progress-bar.subscription .flag span.success-flag{
-				background: url(../images/under-flag.png) no-repeat;
+				background: url(../images/success-flag.png) no-repeat;
 			}
 			
 			.progress-bar.subscription .flag span.danger-flag{
-				background: url(../images/caution-flag.png) no-repeat;
+				background: url(../images/danger-flag.png) no-repeat;
 			}
 			
 			.progress-bar.subscription .flag span.error-flag{
-				background: url(../images/warning-flag.png) no-repeat;
+				background: url(../images/error-flag.png) no-repeat;
 			}
 
 			.progress-bar.subscription .remaining-amount{
