@@ -3,6 +3,8 @@
 progressBarPlugin is a jQjuery plugin that allows user's to dynamically load as many progress bars within
 a webpage when needed by specifying it's selector id or by using jquery's data().  Currently, there's only one "type" of progress bar and that is the "subscription" progress bar.  You'll read more about it below.  
 
+Example: [Subscription Demo](http://bkahl.github.com/progressBarPlugin/)
+
 1. Subscription Progress Bar
 	- allows users to keep track of their usage so that they don't go over their plan.
 	- (ex) AT&T could use this to allow their client's to keep track of their data plan, so they know when
