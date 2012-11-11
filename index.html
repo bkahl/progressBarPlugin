@@ -15,6 +15,83 @@
         <link rel="stylesheet" href="css/progress-bar.css">
 	    <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
 
+		<style>
+			form,input,select,textarea{margin:0; padding:0; color:#fff;}
+
+			div.box{
+			margin:0 auto;
+			width:500px;
+			background:#222;
+			position:relative;
+			top:50px;
+			border:1px solid #262626;
+			}
+
+			div.box h1{ 
+			color:#FFF5CC;
+			font-size:18px;
+			text-transform:uppercase;
+			padding:5px 0 5px 5px;
+			border-bottom:1px solid #161712;
+			border-top:1px solid #161712; 
+			}
+
+			div.box label{
+			width:100%;
+			display: block;
+			background:#1C1C1C;
+			border-top:1px solid #262626;
+			border-bottom:1px solid #161712;
+			padding:10px 0 10px 0;
+			}
+			div.box label span{
+			display: block;
+			color:#bbb;
+			font-size:12px;
+			float:left;
+			width:100px;
+			text-align:right;
+			padding:5px 20px 0 0;
+			}
+
+			div.box .input_text{
+			padding:10px 10px;
+			width:200px;
+			background:#262626;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333;
+			border-right:1px double #333;
+			}
+
+			div.box .message{
+			padding:7px 7px;
+			width:350px;
+			background:#262626;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333;
+			border-right:1px double #333;
+			overflow:hidden;
+			height:150px;
+			}
+
+			div.box .button
+			{
+			margin:0 0 10px 0;
+			padding:4px 7px;
+			background:#CC0000;
+			border:0px;
+			position: relative;
+			top:10px;
+			left:382px;
+			width:100px;
+			border-bottom: 1px double #660000;
+			border-top: 1px double #660000;
+			border-left:1px double #FF0033;
+			border-right:1px double #FF0033;
+			}
+		</style>
     </head>
 
     <body>
@@ -27,22 +104,88 @@
 	
 		<a href="https://github.com/bkahl/progressBarPlugin" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 		
-		<div id="1" style="width: 600px;"></div>
-		<div data-id="2" class="progressBar" data-type="subscription" style="width: 80%;" data-usage="85" data-max="100" data-title="subscription" data-success="your under" data-danger="getting close" data-error="youve gone over"></div>
-		<div data-id="3" class="progressBar" data-type="subscription" style="width: 100%;" data-usage="90000" data-max="100" data-title="subscription" data-success="your under" data-danger="getting close" data-error="youve gone over"></div>
-		
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script src="js/jquery.progressBar.js"></script>
-		<script>
-			$().ready(function(){
-				
-				$("#1").progressBar({
-					currentContactUsage: 75,
-					currentContactEntitlement: 100,
-					type: 'subscription'
-				});
-				
-			});
-		</script>
-    </body>
-</html>
+				<div id="1" style="width: 100%;"></div>
+
+				 <form action="./" method="post">
+			          <div class="box">
+						<h1>**Plugin Demo**</h1>
+			            <h1>Progress Bar</h1>
+			            <label>
+			               <span>Width:</span>
+			               		<input type="text" class="input_text" name="name" id="width" value="100%"/>
+			            </label>
+			            <label>
+			               <span>Title:</span>
+			               		<input type="text" class="input_text" name="name" id="title" value="CURRENT CONTACT USAGE"/>
+			            </label>
+			            <label>
+			               <span>Contact Usage:</span>
+			               		<input type="text" class="input_text" name="name" id="usage" value="75"/>
+			            </label>
+			            <label>
+			               <span>Contact Entitlement:</span>
+			               		<input type="text" class="input_text" name="name" id="max" value="100"/>
+			            </label>
+						<h1>Alert Message</h1>
+			            <label>
+			               <span>Success:</span>
+			               		<input type="text" class="input_text" name="name" id="success" value="You're well within your limit and have room to grow. You currently have <span class='alert-amount'></span> contacts remaining."/>
+			            </label>
+						<label>
+			               <span>Danger:</span>
+			               		<input type="text" class="input_text" name="name" id="danger" value="Approaching the top of your contact band! You currently have <span class='alert-amount'></span> contacts remaining."/>
+			            </label>
+						<label>
+			               <span>Error:</span>
+			               		<input type="text" class="input_text" name="name" id="error" value="You've exceeded expectations and are currently above your contact band by <span class='alert-amount'></span> contacts."/>
+			            </label>
+			            <label>
+			                 <input class="button" value="Submit Form" />
+			            </label>
+
+			        </div>
+			    </form>
+
+
+		        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		        <script src="js/jquery.progressBar.js"></script>
+				<script>
+					$().ready(function(){
+
+						$("#1").progressBar({
+							currentContactUsage: 75,
+							currentContactEntitlement: 100
+						});
+
+						$(".button").on("click",function(){
+							var w = $("#width").val(),
+								usage = $("#usage").val(),
+								max = $("#max").val(),
+								title = $("#title").val(),
+								success = $("#success").val(),
+								danger = $("#danger").val(),
+								error = $("#error").val();
+
+							$("#1").empty();
+
+							$("#1").css("width",w);
+
+							console.log('usage : ',usage);
+							console.log('max : ',max);
+
+							$("#1").progressBar({
+								currentContactUsage: usage,
+								currentContactEntitlement: max,
+								title: title,
+							   	message: {
+									success: success,
+									danger: danger,
+									error: error
+								},
+							});
+						});
+
+					});
+				</script>
+		    </body>
+		</html>
